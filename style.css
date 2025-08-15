@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --white-clr: #fff;
+    --black-clr: #000;
+    --light-black: #333333e7;
+    --primary-clr: #e6303d;
+    --secondary-clr: #eee;
+    --tag-clr: #7cc576;
+    --light-blue : #0995db;
+
+}
+ /* basic styling */
+ 
+ li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: var(--primary-clr);
+}
+img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform .3s ease-in-out;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    max-width: 80%;
+    margin: auto;
+}
+
+.section{
+    padding-top: 4rem;
+}
+
+
+/* navbar styling */
+header{
+    background-color: var(--white-clr);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    box-shadow: 0px 5px 14px .75px rgba(168, 162, 162, 0.654);
+}
+.logo{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--light-blue);
+}
+
+.link{
+    font-size: 15px;
+    color: var(--light-black);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.icon{
+    font-size: 15px;
+    color: var(--light-black);
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50% ;
+}
+
+.icon:hover,
+.icon-active{
+   background: var(--secondary-clr);
+}
+span,
+.link-active,
+.icon-active
+{
+    color: var(--primary-clr);
+}
+
+.navbar{
+    height: 70px;
+    justify-content: space-between;
+}
+
+.navlist{
+    gap: 50px;
+}
+.nav-icons{
+    gap: 20px;
+}
+
+/* mobile */
+.hamburger{
+    font-size: 1.7rem;
+    color: var(--primary-clr);
+    display: none;
+}
+
+/* section styling */
+
+.hero{
+    height: 115vh;
+    background-image: url(hero-image.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 4.51rem;
+    text-align: center;
+}
+
+.hero-content{
+    height: 100%;
+    justify-content: flex-end;
+    text-align: start;
+}
+
+h3{
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 4rem;
+    color: var(--light-black);
+}
+
+h1{
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: 600;
+    color: var(--light-black);
+}
+
+h4{
+    font-size: 1.2rem;
+    font-weight: 350;
+    line-height: 4rem;
+    color: var(--light-black);
+    text-align-last: left;
+}
+
+button{
+    padding: .8rem 2.2rem;
+    font-size: 0.9rem ;
+    font-weight: 600;
+    color: var(--secondary-clr);
+    background-color: var(--primary-clr);
+    border: none;
+    text-transform: uppercase;
+ 
+}
+
+button:hover{
+    background-color: var(--light-black);
+}
+
+.category-container{
+    display: grid;
+    grid-template-columns:repeat(3,1fr) ;
+    grid-gap: 1.7rem;
+}
+
+.category:nth-child(1),
+.category:nth-child(4){
+    grid-row: 1/3;
+}
+.category:nth-child(2){
+    grid-row: 1/2;
+}
+
+.category{
+    position: relative;
+    overflow: hidden;
+}
+.category button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 400;
+    background-color: var(--white-clr);
+    color: var(--black-clr);
+    z-index: 4;
+}
+
+.category button:hover{
+    background-color: var(--primary-clr);
+    color: var(--white-clr);
+}
+
+.category:hover img{
+    transform: scale(1.1);
+}
+
+.category::before{
+    content: '';
+    position: absolute;
+    background-color: var(--white-clr);
+    width: 0;
+    height: 100%;
+    opacity: .2;
+    z-index: 2;
+    transition: all .3s ease-in-out;
+}
+
+.category:hover::before{
+    width: 100%;
+
+}
+
+/* New Product Section */
+h2{
+    font-size: 2rem;
+    line-height: 4rem;
+    color: var(--light-black);
+    font-weight: 500;
+    text-align: center;
+}
+
+.line{
+    background: var(--primary-clr);
+    height: 2.5px;
+    width: 100px;
+    margin: auto;
+}
+   
+.card-container {
+    justify-content: center;
+    margin-top: 3rem ;
+    text-align: center;
+}
+
+.card{
+    border-right: 1px solid #efefef;
+    flex: 1;
+    padding-block: 3.1rem;
+}
+
+.card:hover{
+    box-shadow: 0px 5px 19px 1px rgba(36, 11, 12, 15);
+    z-index: 3;
+}
+
+.card-content{
+    padding: 0.3rem;
+}
+.title{
+    font-size: 1rem;
+    color: var(--light-black);
+    line-height: 1.7rem;
+    font-weight: 500;
+}
+
